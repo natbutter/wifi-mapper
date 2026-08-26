@@ -518,7 +518,7 @@
 
     // Example floor plan buttons
     const loadExample = () => {
-        loadFloorPlanFromSrc('/static/example-floorplan.png');
+        loadFloorPlanFromSrc('example-floorplan.png');
         showToast('Loaded example floor plan', 'info');
     };
     if (dom.btnExampleCta) dom.btnExampleCta.addEventListener('click', loadExample);
@@ -850,6 +850,6 @@
 
     // ===== Init =====
     startLivePolling();
-    loadFloorPlanFromSrc('/static/example-floorplan.png');
+    loadFloorPlanFromSrc('example-floorplan.png');
 
 })();
