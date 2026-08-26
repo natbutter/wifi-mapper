@@ -38,6 +38,7 @@
     const canvasArea = $('#canvasArea');
 
     const dom = {
+        demoBanner: $('#demoBanner'),
         floorPlanInput: $('#floorPlanInput'),
         uploadZone: $('#uploadZone'),
         emptyState: $('#emptyState'),
@@ -145,13 +146,16 @@
             if (data.error) {
                 dom.signalRssi.textContent = 'Error';
                 dom.signalQuality.textContent = data.error;
+                dom.demoBanner.style.display = 'flex';
                 return null;
             }
+            dom.demoBanner.style.display = 'none';
             updateLiveSignal(data);
             return data;
         } catch (e) {
             dom.signalRssi.textContent = '-- dBm';
             dom.signalQuality.textContent = 'Server offline';
+            dom.demoBanner.style.display = 'flex';
             return null;
         }
     }

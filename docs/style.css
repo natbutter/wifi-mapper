@@ -800,3 +800,26 @@ body {
         display: none;
     }
 }
+
+/* Demo Banner */
+.demo-banner {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--error);
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-banner a {
+    color: var(--error);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.demo-banner a:hover {
+    color: #b91c1c;
+}
